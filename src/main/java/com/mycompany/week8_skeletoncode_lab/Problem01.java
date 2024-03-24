@@ -1,20 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package com.mycompany.week8_skeletoncode_lab;
 
-/**
- *
- * @author MoaathAlrajab
- */
-public class Problem01 {
-    
-    public static long getSumOfPrimes(int n){
-    // Todo 04: Develop a method that returns the sum of the prime numbers between 1 and n
-    //          Test your solution
-    //          Analyze its space and time  
-    
+public class LinearSearch {
+ 
+    public static int search(int arr[], int x) {
+        int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            if (arr[i] == x) {
+                return i; // element found at index i
+            }
+        }
+        return -1; // element not found
     }
     
+   
+    public static void main(String[] args) {
+        int[] arr = {1, 5, 9, 11, 15, 20};
+        int target = 11;
+        int index = search(arr, target);
+        if (index != -1) {
+            System.out.println("Element found at index " + index);
+        } else {
+            System.out.println("Element not found in the array");
+        }
+    }
 }
